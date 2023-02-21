@@ -1,0 +1,174 @@
+:root {
+    --banner-width: 30vw;
+    --banner-height: calc(var(--banner-width) * 0.586);
+    --my-padding: 10px;
+}
+
+* {
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    padding: var(--my-padding);
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.logo {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.navigation {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+li {
+    flex: 0 1 auto;
+    width: 200px;
+    text-align: center;
+
+}
+
+li:hover {
+    border-bottom: solid 2px grey;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#current {
+    border-bottom: solid 2px black;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.banner {
+    background-color: rgb(232 230 230 / 80%);
+    height: calc(var(--banner-height) + 150px);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.photo {
+    align-self: flex-start;
+    width: var(--banner-width);
+    height: var(--banner-height);
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.text {
+    align-self: flex-end;
+    width: var(--banner-width);
+    height: var(--banner-height);
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 30px;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    font-weight: 400;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.project {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.project-data {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.project-image {
+    width: 30vw;
+}
+
+.project-image>img {
+    height: auto;
+}
+
+.project-button {
+    background-color: rgb(2, 63, 2);
+    color: white;
+    padding: 10px;
+}
+
+.project-button>a {
+    color: white;
+    font-weight: 300;
+
+}
+
+.footer>p {
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    :root {
+        --banner-width: calc(50vw - var(--my-padding));
+        --banner-height: calc(var(--banner-width) * 0.586);
+    }
+
+    .banner {
+        background-color: white;
+        height: var(--banner-height);
+    }
+
+    .photo,
+    .banner {
+        margin: 0px;
+        align-self: center;
+    }
+
+    .project-image,
+    .project-data {
+        width: 80vw;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    :root {
+        --banner-width: calc(80vw);
+        --banner-height: calc(var(--banner-width) * 0.586);
+    }
+
+    .banner {
+        margin-bottom: 200px;
+    }
+}
